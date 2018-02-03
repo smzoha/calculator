@@ -1,0 +1,65 @@
+HBox, VBox {
+    -fx-background-color: rgb(232, 232, 232);
+}
+
+.vbox-title {
+    -fx-background-color: black;
+}
+
+.btn-exit {
+    -fx-background-color: transparent;
+}
+
+.btn-exit:hover {
+    -fx-background-color: red;
+    -fx-background-radius: 0;
+}
+
+.lbl-output {
+    -fx-background-color: transparent;
+}
+
+.btn-number {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+}
+
+.btn-number:hover, .btn-operator, .btn-ac {
+    -fx-background-color: rgb(212, 212, 212);
+    -fx-background-radius: 0;
+}
+
+.btn-number:pressed, .btn-operator:hover, .btn-ac:hover {
+    -fx-background-color: rgb(192, 192, 192);
+    -fx-background-radius: 0;
+}
+
+.btn-operator:pressed, .btn-ac:pressed {
+    -fx-background-color: rgb(172, 172, 172);
+    -fx-background-radius: 0;
+}
+
+.btn-equals {
+    -fx-background-color: linear-gradient(#ffce48, #ff8fa0);
+    -fx-background-radius: 0;
+}
+
+.btn-equals:hover {
+    -fx-background-color: linear-gradient(#ecbb43, #ec8191);
+    -fx-background-radius: 0;
+}
+
+.btn-ac {
+    -fx-text-fill: linear-gradient(#ecbb43, #cd6878);
+    -fx-background-radius: 0;
+}
+
+.btn-equals:hover {
+    -fx-background-color: linear-gradient(#ecbb43, #ec8191);
+    -fx-background-radius: 0;
+}
+
+.btn-equals:pressed {
+    -fx-background-color: linear-gradient(#e4b341, #e47b8b);
+    -fx-background-radius: 0;
+}

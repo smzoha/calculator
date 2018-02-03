@@ -1,0 +1,13 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+jar {
+    manifest {
+        attributes 'Title' : 'Calculator',
+        'Organization' : 'ZedApps',
+        'Version' : '1.0',
+        'Main-Class' : 'com.zedapps.calculator.Main'
+    }
+}
+
+mainClassName = "com.zedapps.calculator.Main"
