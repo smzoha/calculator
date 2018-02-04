@@ -1,3 +1,5 @@
+![alt text](src/main/resources/calculator_icon.png "Calculator Logo") 
+
 # Calculator
 
 A simple calculator implementation to learn and try out the basics of JavaFX.
