@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -22,6 +23,8 @@ public class Main extends Application {
         Scene layoutHolder = new Scene(layout, 300, 400);
         layoutHolder.getStylesheets().add(getClass().getResource("/css/view.css").toExternalForm());
 
+        addWindowDragHandler(primaryStage, layoutHolder);
+
         setupStage(primaryStage, layoutHolder);
         primaryStage.show();
     }
@@ -31,6 +34,14 @@ public class Main extends Application {
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setResizable(false);
         primaryStage.setScene(layoutHolder);
+        primaryStage.getIcons().add(new Image("calculator_icon.png"));
+    }
+
+    private void addWindowDragHandler(Stage primaryStage, Scene layoutHolder) {
+        layoutHolder.setOnMouseDragged(event -> {
+            primaryStage.setX(event.getScreenX());
+            primaryStage.setY(event.getScreenY());
+        });
     }
 
     public static void main(String[] args) {
