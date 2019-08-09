@@ -33,7 +33,8 @@ public class CalculatorController {
 
         if (input.equals(".")) {
             if (!value.contains(".")) {
-                value = value.concat("0" + input);
+                if (value.isEmpty()) value = value.concat("0");
+                value = value.concat(input);
             }
         } else {
             value = value.concat(input);
