@@ -1,13 +1,17 @@
-apply plugin: 'java'
-apply plugin: 'application'
-
-jar {
-    manifest {
-        attributes 'Title' : 'Calculator',
-        'Organization' : 'ZedApps',
-        'Version' : '1.0',
-        'Main-Class' : 'com.zedapps.calculator.Main'
-    }
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
 }
 
-mainClassName = "com.zedapps.calculator.Main"
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = '22.0.1'
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+application {
+    mainClass = 'com.zedapps.calculator.Main'
+}
